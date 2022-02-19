@@ -4,6 +4,10 @@ var $saveNoteBtn = $(".save-note");
 var $newNoteBtn = $(".new-note");
 var $noteList = $(".list-container .list-group");
 
+$noteList.hide();
+$noteTitle.hide();
+$noteText.hide();
+
 // activeNote is used to keep track of the note in the textarea
 var activeNote = {};
 
@@ -51,6 +55,9 @@ var renderActiveNote = function() {
 
 // Get the note data from the inputs, save it to the db and update the view
 var handleNoteSave = function() {
+  $noteList.show();
+  $noteTitle.hide();
+  $noteText.hide();
   var newNote = {
     title: $noteTitle.val(),
     text: $noteText.val()
@@ -88,9 +95,11 @@ var handleNoteView = function() {
 };
 
 // Sets the activeNote to and empty object and allows the user to enter a new note
-var handleNewNoteView = function() {
-  activeNote = {};
+var handleNewNoteView = function(event) {
+  $noteTitle.show();
+  $noteText.show();
   renderActiveNote();
+  // console.log(event)
 };
 
 // If a note's title or text are empty, hide the save button
