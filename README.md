@@ -23,7 +23,7 @@ This is a webpage application with which you can write your own notes with a tit
 This product is under the GNU AGPLv3.
 
 ## Installation
-Bookmark this page https://arbourkyle.github.io/expressjs_note_taker/
+Bookmark this page https://still-escarpment-14462.herokuapp.com/
 
 ## Usage
 On visiting the page, click get started, then you can click the plus sign in the upper right to add a note, when you are finished writing, click the save icon next to the plus sign and it will be added to the left. Note the red trash can icon.
